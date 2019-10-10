@@ -45,8 +45,9 @@ android {
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
 
         //1.解决arm64-v8a引起的闪退，因为没有64位的libflutter.so文件，flutter当前1.0.0版本的问题
+        // 此問題在較新版本的 Flutter 中已經解決
         ndk {
-            abiFilters "armeabi", "x86", "armeabi-v7a"
+            abiFilters "armeabi", "x86", "armeabi-v7a", "arm64-v8a"
         }
     }
 
